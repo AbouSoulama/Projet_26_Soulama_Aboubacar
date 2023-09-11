@@ -5,7 +5,7 @@
 // $bdd = new PDO('mysql:host=localhost;dbname=backend_formulaire', 'root', '');
 // }
 // catch(Exception $e)
-// {
+// 
 // die('Erreur : '.$e->getMessage());
 
 

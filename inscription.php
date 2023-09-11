@@ -5,13 +5,20 @@
 @$Email = $_POST["Email"];
 @$Mot_de_passe = $_POST["Passe"];
 @$Nom_utilisateur = $_POST["Utilisateur"];
-@$Contact = $_POST["Contact"];
-@$Naissance =$_POST["Age"];
-@$Sexe = $_POST["Sexe"];
+// @$Contact = $_POST["Contact"];
+// @$Naissance =$_POST["Age"];
+// @$Sexe = $_POST["Sexe"];
 @$submit =$_POST["submit"];
 $erreur="";
 if((isset($submit)))
-  if(empty($Nom) OR empty($Prenom) OR empty($Email) OR empty($Mot_de_passe) OR empty($Nom_utilisateur) OR empty($Contact) OR empty($Naissance) OR empty($Sexe)) $erreur="<li>Veuillez remplir tout les champs !</li> <br> ";
+  if(empty($Nom) OR
+      empty($Prenom) OR
+       empty($Email) OR
+        empty($Mot_de_passe) OR 
+        empty($Nom_utilisateur)) $erreur="*Veuillez remplir tous les champs ! <br> ";
+        //  empty($Contact) OR 
+        //  empty($Naissance) OR 
+        //  empty($Sexe)) 
   
 else if((isset($submit))) {
   echo "Nom: $Nom <br> ";
@@ -19,9 +26,9 @@ else if((isset($submit))) {
   echo "Email: $Email <br> ";
   echo "Mot de passe: $Mot_de_passe <br> ";
   echo "Nom utlisateur: $Nom_utilisateur <br> ";
-  echo "Contact: $Contact <br> ";
-  echo "Naissance: $Naissance <br> ";
-  echo "Sexe: $Sexe <br> ";
+  // echo "Contact: $Contact <br> ";
+  // echo "Naissance: $Naissance <br> ";
+  // echo "Sexe: $Sexe <br> ";
 }
 ?>
 <!DOCTYPE html>
@@ -31,8 +38,9 @@ else if((isset($submit))) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend formulaire</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="shortcut icon" href="channels4_profile.jpg">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 </head>
@@ -93,7 +101,7 @@ else if((isset($submit))) {
     
     </section>
     
-    <section>
+    <section class="section">
     <div class="bien">
     
     <h1>Bienvenue sur ma page</h1>
@@ -102,10 +110,10 @@ else if((isset($submit))) {
     
     </div>
     
-    </section>
     
     
-    <section>
+    
+  
         <form action="inscription.php" method="post">
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-4">
@@ -126,7 +134,7 @@ else if((isset($submit))) {
             <!-- Email input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="form3Example3">Adress email</label>
-              <input type="email" id="form3Example3" class="form-control" placeholder="Entré votre email"/ name="Email">
+              <input type="email" id="form3Example3" class="form-control" placeholder="Entré votre email" name="Email"/>
             </div>
           
             <!-- Password input -->
@@ -140,20 +148,20 @@ else if((isset($submit))) {
               <input type="text" id="form3Example4" class="form-control" placeholder="Saisir un nom utilisateur" name="Utilisateur"/>
             </div>
             <!-- Contact -->
-            <div class="form-outline mb-4">
+            <!-- <div class="form-outline mb-4">
                 <label class="form-label" for="form3Example4">Contact</label>
-              <input type="number" id="form3Example4" class="form-control" placeholder="Saisir un contact" name="Contact"/>
+              <input type="phone" id="form3Example4" class="form-control" placeholder="Saisir un contact" name="Contact"/>
             </div>
-            <!-- Anneée -->
+            
             <div class="form-outline mb-4">
                 <label class="form-label" for="form3Example4">Age</label>
               <input type="number" id="form3Example4" class="form-control" placeholder="Saisir votre age" name="Age"/>
             </div>
-            <!-- Nationalitée-->
+          
             <div class="form-outline mb-4">
                 <label class="form-label" for="form3Example4">Sexe</label>
-              <input type="text" id="form3Example4" class="form-control" placeholder="indiquez votre sexe" name="Sexe"/>
-            </div>
+              <input type="" id="form3Example4" class="form-control" placeholder="indiquez votre sexe" name="Sexe"/>
+            </div> -->
             <!-- <div class="form-outline mb-4">
                 <label class="form-label" for="form3Example4">Photo de profil</label>
               <input type="file" id="form3Example4" class="form-control" placeholder="choisir une photo"/>
@@ -168,7 +176,7 @@ else if((isset($submit))) {
             </div>
           
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4 bott" name="submit" style="background: wheat; margin-top: 3%;">Enregistré</button> <br><br>
+            <button type="submit" class="btn btn-primary btn-block mb-4 bott rr" name="submit" style="background: green; margin-top: 3%;">Enregistré</button> 
           
      
     </form>

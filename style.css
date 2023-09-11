@@ -4,16 +4,19 @@
     box-sizing: border-box;
 }
 .bien h1{
-    padding-left: 30%;
+    /* padding-left: 30%; */
+    text-align: center;
     padding-top: 3%;
     color: rgb(79, 255, 196);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .bien p{
-    padding-left: 30%;
+    /* padding-left: 30%; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     padding-top: 2%;
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
 nav a{
     font-size: 1.2rem;
@@ -37,9 +40,20 @@ nav select{
     width: 100px;
     height: 35px;
 }
+.section{
+    margin-left: 400px;
+    margin-right: 400px;
+    background: rgb(112, 50, 0);
+    border-radius: 10px; 
+    margin-top: .8%;
+}
 form{
-    padding-left: 250px;
-    padding-right: 300px;
+    padding-left: 75px;
+    padding-right: 75px;
+   
+}
+label{
+    color: white;
 }
 .bott{
 width: 150px;
@@ -50,5 +64,35 @@ background: rgb(255, 101, 101);
 #erreur{
     background: red;
     color: white;
-    padding: 10px;
+    padding: 7px;
+    width: 400pX;
+    margin-left: 75px;
+}
+@media (max-width: 300px) {
+    .section{
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    form{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #erreur{
+        margin-left: 20px;
+        width: 200px;
+        font-size: 10px;
+    }
+    .bien h1{
+       font-size: 1.4rem;
+    }
+    .bien p{
+        font-size: .8rem;
+    }
+    .rr{
+        width: 100px;
+        height: 35px;
+        font-size: 10px;
+    }
+    
 }
